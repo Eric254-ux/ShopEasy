@@ -143,18 +143,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (paymentForm) {
         paymentForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const formData = new FormData(paymentForm);
-            const phoneNumber = formData.get('phone-number');
-            const amount = formData.get('amount');
-
-            // In a real app, this would initiate M-Pesa payment
-            alert(`M-Pesa payment initiated for ${amount} to ${phoneNumber}. Please check your phone to complete the transaction.`);
-            cart = [];
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartCount();
-            window.location.href = 'index.html';
+            processPayment();
         });
     }
+});
+
+function processPayment() {
+    const phoneNumber = document.getElementById('phone-number').value;
+    const amount = document.getElementById('amount').value;
+
+    if (!phoneNumber || !amount) {
+        alert('Please fill in all payment details.');
+        return;
+    }
+
+    // In a real app, this would initiate M-Pesa payment
+    alert(`M-Pesa payment initiated for ${amount} KSH to ${phoneNumber}. Please check your phone to complete the transaction.`);
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    window.location.href = 'index.html';
+}
 
     // Display cart or checkout if on respective pages
     if (document.getElementById('cart-items')) {
@@ -163,4 +172,3 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('checkout-items')) {
         displayCheckout();
     }
-});
