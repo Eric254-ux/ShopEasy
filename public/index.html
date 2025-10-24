@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ShopEasy</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to ShopEasy</h1>
+            <p>Your one-stop shop for all your electronic needs</p>
+        </section>
+
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/ea.jpeg" alt="Smartphone">
+                    <h3>Smartphone</h3>
+                    <p>149000 KSH</p>
+                    <button onclick="addToCart('Smartphone', 149000)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/eb.jpeg" alt="Laptop">
+                    <h3>Laptop</h3>
+                    <p>29999 KSH</p>
+                    <button onclick="addToCart('Laptop', 29999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ec.jpeg" alt="Tablet">
+                    <h3>Tablet</h3>
+                    <p>11999 KSH</p>
+                    <button onclick="addToCart('Tablet', 11999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ed.jpeg" alt="Smartwatch">
+                    <h3>Smartwatch</h3>
+                    <p>2999 KSH</p>
+                    <button onclick="addToCart('Smartwatch', 2999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ee.jpeg" alt="Bluetooth Headphones">
+                    <h3>Bluetooth Headphones</h3>
+                    <p>999 KSH</p>
+                    <button onclick="addToCart('Bluetooth Headphones', 999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ef.jpeg" alt="Wireless Earbuds">
+                    <h3>Wireless Earbuds</h3>
+                    <p>799 KSH</p>
+                    <button onclick="addToCart('Wireless Earbuds', 799)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/eg.jpeg" alt="LG Smart TV">
+                    <h3>LG Smart TV</h3>
+                    <p>27899 KSH</p>
+                    <button onclick="addToCart('LG Smart TV', 27899)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/eh.jpeg" alt="Gaming Console">
+                    <h3>Gaming Console</h3>
+                    <p>67999 KSH</p>
+                    <button onclick="addToCart('Gaming Console', 67999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ei.jpeg" alt="Desktop">
+                    <h3>Desktop</h3>
+                    <p>17899 KSH</p>
+                    <button onclick="addToCart('Desktop', 17899)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ej.jpeg" alt="Wired Keyboard">
+                    <h3>Wired Keyboard</h3>
+                    <p>1199 KSH</p>
+                    <button onclick="addToCart('Wired Keyboard', 1199)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ek.jpeg" alt="Wired Mouse">
+                    <h3>Wired Mouse</h3>
+                    <p>459 KSH</p>
+                    <button onclick="addToCart('Wired Mouse', 459)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/el.jpeg" alt="Gaming Keyboard">
+                    <h3>Gaming Keyboard</h3>
+                    <p>2999 KSH</p>
+                    <button onclick="addToCart('Gaming Keyboard', 2999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/em.jpeg" alt="VR Headset">
+                    <h3>VR Headset</h3>
+                    <p>11999 KSH</p>
+                    <button onclick="addToCart('VR Headset', 11999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/en.jpeg" alt="Wireless Mouse">
+                    <h3>Wireless Mouse</h3>
+                    <p>799 KSH</p>
+                    <button onclick="addToCart('Wireless Mouse', 799)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/eo.jpeg" alt="Gaming Laptop">
+                    <h3>Gaming Laptop</h3>
+                    <p>77999 KSH</p>
+                    <button onclick="addToCart('Gaming Laptop', 77999)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/ep.jpeg" alt="Macbook">
+                    <h3>Macbook</h3>
+                    <p>49999 KSH</p>
+                    <button onclick="addToCart('Macbook', 49999)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
