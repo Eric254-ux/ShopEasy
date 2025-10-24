@@ -97,6 +97,11 @@ function proceedToCheckout() {
         alert('Your cart is empty!');
         return;
     }
+    if (localStorage.getItem('loggedIn') !== 'true') {
+        alert('Please log in to proceed to checkout.');
+        window.location.href = 'login.html';
+        return;
+    }
     window.location.href = 'checkout.html';
 }
 
@@ -135,6 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // In a real app, this would authenticate with the server
             alert(`Login successful for ${username}!`);
+            localStorage.setItem('loggedIn', 'true');
+            localStorage.setItem('username', username);
             window.location.href = 'index.html';
         });
     }
@@ -165,6 +172,13 @@ function processPayment() {
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
+    window.location.href = 'index.html';
+}
+
+function logout() {
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('username');
+    alert('Logged out successfully.');
     window.location.href = 'index.html';
 }
 
