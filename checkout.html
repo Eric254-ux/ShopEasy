@@ -28,6 +28,21 @@
             <div id="checkout-total">
                 <p>Total: <span id="checkout-total-amount">0</span> KSH</p>
             </div>
+            <form id="delivery-form">
+                <h3>Delivery Address</h3>
+                <div class="form-group">
+                    <label for="region">Region Name:</label>
+                    <input type="text" id="region" name="region" placeholder="e.g., Nairobi" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City Name:</label>
+                    <input type="text" id="city" name="city" placeholder="e.g., Nairobi" required>
+                </div>
+                <div class="form-group">
+                    <label for="postal-address">Postal Address (Optional):</label>
+                    <input type="text" id="postal-address" name="postal-address" placeholder="e.g., P.O. Box 12345">
+                </div>
+            </form>
             <form id="payment-form">
                 <h3>Payment Details (M-Pesa)</h3>
                 <div class="form-group">

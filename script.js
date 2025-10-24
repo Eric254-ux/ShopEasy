@@ -149,16 +149,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function processPayment() {
+    const region = document.getElementById('region').value;
+    const city = document.getElementById('city').value;
+    const postalAddress = document.getElementById('postal-address').value;
     const phoneNumber = document.getElementById('phone-number').value;
     const amount = document.getElementById('amount').value;
 
-    if (!phoneNumber || !amount) {
-        alert('Please fill in all payment details.');
+    if (!region || !city || !phoneNumber || !amount) {
+        alert('Please fill in all required delivery and payment details.');
         return;
     }
 
-    // In a real app, this would initiate M-Pesa payment
-    alert(`M-Pesa payment initiated for ${amount} KSH to ${phoneNumber}. Please check your phone to complete the transaction.`);
+    // In a real app, this would initiate M-Pesa payment and save delivery address
+    alert(`Order placed! Delivery to ${region}, ${city}${postalAddress ? ', ' + postalAddress : ''}. M-Pesa payment initiated for ${amount} KSH to ${phoneNumber}. Please check your phone to complete the transaction.`);
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
